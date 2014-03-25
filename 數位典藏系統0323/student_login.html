@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css">
+        <script type="text/javascript" src="plugin/jQuery/js/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script type="text/javascript" src="js/chen.js"></script>
+		
+		<script language="JavaScript">
+		$(document).ready(function()
+		{
+			$("#login").click(function(){
+				if($("#username").val() == "" && $("#psw").val() == "" ){
+					alert( "帳號密碼");
+				}
+				else{
+					location.replace("http://tw.yahoo.com/");
+					//document.write("<a href = "http://tw.yahoo.com/"></a>");
+				}
+			});
+		});
+/*		
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|Opera/i.test(navigator.userAgent) ){
+			alert('mobile');
+		} else {
+			alert('PC');
+		}
+*/		
+		</script>
+	</head>
+	<body>
+	<div id="index" data-url="index" data-role="page" data-theme="d" >
+		<div data-role="header" data-position="fixed" data-theme="b" >
+			<h1>學生認證</h1>
+			<div data-role="navbar">
+				<ul>
+				<li><a href="index.html" data-icon="arrow-l">上一頁</a></li>
+				<li><a href="index.html" data-icon="home">首頁</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div data-role="content">
+			<div id="id">
+				<center>
+					<h4 for="id">帳號</h4>
+					<input type="text" name="username" id="username"/>
+				</center>
+			</div> 
+			<div id="password">
+				<center>
+					<h4 for="password">密碼</h4>
+					<input type="text" name="password" id="psw"/>
+				</center>
+			</div> 
+			<br/>
+			<br/>
+			<br/>			
+			<div id ="login" >
+				<input type="button"  id="login1" data-theme="b" value="登入"/>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
